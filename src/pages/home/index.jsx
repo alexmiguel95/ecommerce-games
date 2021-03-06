@@ -1,7 +1,9 @@
 import React from 'react';
-import Header from '../../components/header'
-import WhyBuyHere from '../../components/why-buy-here'
+import Header from '../../components/header';
+import WhyBuyHere from '../../components/why-buy-here';
+import CardGame from '../../components/card-game';
 import styled from 'styled-components';
+
 
 const Home = () => {
     return(
@@ -10,7 +12,7 @@ const Home = () => {
             
             <StyledMain>
                 <StyledContainerProducts>
-                    <WhyBuyHere /> 
+                    <WhyBuyHere />
                 </StyledContainerProducts>
             </StyledMain>
         </>
@@ -29,7 +31,4 @@ const StyledMain = styled.main`
 
 const StyledContainerProducts = styled.div`
     margin: 45px;
-
-
-    border: 1px solid blue;
 `;
