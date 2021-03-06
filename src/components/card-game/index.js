@@ -10,21 +10,19 @@ const CardGame = ({name, image, price}) => {
 
     return(
         <StyledCard
-            bordered={false}
-            bodyStyle={{color: "white"}}
             cover={
                 <img
-                    alt="example"
+                    alt={`Imagem do jogo ${image}`}
                     src={require(`../../assets/${image}`).default}
-                    style={{height: "98px"}}
+                    
                 />
             }
-            actions={[<StyledButtonBuy>{" "}</StyledButtonBuy>]}
         >
             <Meta
                 title={name}
                 description={`R$ ${price}`}
             />
+            <StyledButtonBuy>{" "}</StyledButtonBuy>
       </StyledCard>
     );
 }
@@ -32,22 +30,29 @@ const CardGame = ({name, image, price}) => {
 export default CardGame;
 
 const StyledCard = styled(Card)`
-    width: 190;
-    height: 220;
+    width: 205px;
 
     img{
-        width: 190px;
+        height: 110px;
     }
 `;
 
 const StyledButtonBuy = styled(Button)`
     color: black;
-    border: 1px solid #0199CC;
+    border-color: #0199CC;
     border-radius: 4px;
     width: 140px;
     background: #0199CC url(${imgCart}) no-repeat center;
     background-size: 30px 30px;
     font-weight: bold;
+    margin-top: 10px;
+
+    &:hover{
+        background: #0199CC url(${imgCart}) no-repeat center;
+        background-size: 30px 30px;
+        color: white;
+        border-color: #0199CC;
+    }
 
     &:focus{
         background: #339933 url(${imgAddCart}) no-repeat center;
