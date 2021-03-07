@@ -64,11 +64,8 @@ const defaultState = [
     }
 ]
 
-const productsList = (state = defaultState, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
+const productsList = (state = defaultState) => {
+    return state;
 }
  
 export default productsList;

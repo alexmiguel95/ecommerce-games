@@ -24,7 +24,6 @@ const CardGameRender = () => {
                     <CardGame name={game.name} image={game.image}  price={game.price}/>
                 </List.Item>
             )}
-            style={{border: "1px solid red"}}
         />
     )
 }

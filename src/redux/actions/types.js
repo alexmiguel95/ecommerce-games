@@ -1,3 +1,3 @@
-export const ADD_TASK = 'ADD_TASK';
-export const DELETE_TASK = 'DELETE_TASK';
-export const UPDATE_TASK = 'UPDATE_TASK';
+export const ADD_SHOPPING_CAR = 'ADD_SHOPPING_CAR';
+export const DELETE_SHOPPING_CAR = 'DELETE_SHOPPING_CAR';
+export const GET_PRORI_VALUE = 'GET_PRORI_VALUE';

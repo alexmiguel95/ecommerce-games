@@ -1,5 +1,5 @@
-import { ADD_TASK, DELETE_TASK, UPDATE_TASK } from './types';
+import { ADD_SHOPPING_CAR, DELETE_SHOPPING_CAR, GET_PRORI_VALUE } from './types';
  
-export const addTask = (task) => { return { type: ADD_TASK, task: task }}
-export const deleteTask = (indexTask) => { return { type: DELETE_TASK, task: indexTask }}
-export const updateTask = (task) => { return { type: UPDATE_TASK, task: task }}
+export const addSoppingCar = (game) => { return { type: ADD_SHOPPING_CAR, game: game }}
+export const deleteSoppingCar = (game) => { return { type: DELETE_SHOPPING_CAR, game: game }}
+export const getPrioriValue = () => { return { type: GET_PRORI_VALUE }}
