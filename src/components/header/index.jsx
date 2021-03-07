@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ShoppingCard from '../shopping-car';
+import ShoppingCarContainer from '../../containers/shopping-car-container';
 
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
                 <img src={require('../../assets/logo.png').default} alt='Logo Challenge'/>
             </figure>
 
-            <ShoppingCard />
+            <ShoppingCarContainer />
         </StyledHeader>
     );
 }

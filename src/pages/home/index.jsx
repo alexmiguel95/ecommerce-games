@@ -1,19 +1,15 @@
 import React from 'react';
-import Header from '../../components/header';
 import WhyBuyHere from '../../components/why-buy-here';
 import TableProducts from '../../components/table-products';
 import styled from 'styled-components';
 import { useWindowSize } from "../../hooks";
 import { StyledMain } from '../../styled';
 
-
 const Home = () => {
     const [width] = useWindowSize();
 
     return(
         <> 
-            <Header />
-            
             <StyledMain>
                 <StyledContainerProducts>
                     {

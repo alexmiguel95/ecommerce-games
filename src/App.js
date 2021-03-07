@@ -1,15 +1,16 @@
+import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import Home from '../src/pages/home'
-// import Checkout from '../src/pages/checkout'
+import Routes from './routes'
 
-function App() {
-  return (
-    <div className="App">
-      <Home />
-      {/* <Checkout /> */}
-    </div>
-  );
+class App extends Component {
+  render() {
+    return(
+      <div className="App">
+        <Routes />
+      </div>
+    );
+  }  
 }
 
 export default App;
