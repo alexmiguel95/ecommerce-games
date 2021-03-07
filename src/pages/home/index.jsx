@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/header';
 import WhyBuyHere from '../../components/why-buy-here';
-import CardGameRender from '../../components/card-game-render';
+import TableProducts from '../../components/table-products';
 import styled from 'styled-components';
 import { useWindowSize } from "../../hooks";
 import { StyledMain } from '../../styled';
@@ -20,9 +20,8 @@ const Home = () => {
                         width > 1000 &&
                         <WhyBuyHere />
                     }
-            
                     <StyledContainerListProducts>
-                        <CardGameRender />
+                        <TableProducts />
                     </StyledContainerListProducts>
                 </StyledContainerProducts>
             </StyledMain>
@@ -34,6 +33,10 @@ export default Home;
 
 
 const StyledContainerProducts = styled.div`
+    @media(max-width: 576px){ 
+        margin: 0;
+    }
+
     margin: 45px;
 `;
 
