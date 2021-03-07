@@ -3,16 +3,23 @@ import Header from '../../components/header';
 import WhyBuyHere from '../../components/why-buy-here';
 import CardGameRender from '../../components/card-game-render';
 import styled from 'styled-components';
+import { useWindowSize } from "../../hooks";
 
 
 const Home = () => {
+    const [width] = useWindowSize();
+
     return(
         <> 
             <Header />
             
             <StyledMain>
                 <StyledContainerProducts>
-                    <WhyBuyHere />
+                    {
+                        width > 1000 &&
+                        <WhyBuyHere />
+                    }
+            
                     <StyledContainerListProducts>
                         <CardGameRender />
                     </StyledContainerListProducts>

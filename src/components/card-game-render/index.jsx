@@ -4,7 +4,7 @@ import { List } from 'antd';
 import styled from 'styled-components';
 
 const CardGameRender = () => {
-    const [products, setProducts] = useState(
+const [products, setProducts] = useState(
         [
             {
                 "id": 312,
