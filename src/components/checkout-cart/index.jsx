@@ -13,7 +13,7 @@ const CheckoutShoppingCart = () => {
     let [total, setTotal] = useState(0.0);
     
 
-    // Regra de negócio para calcular o pagamento.
+    // Regra de negócio para calcular e mostrar o pagamento.
     useEffect(() => {
         let totalPriorValue = 0.0;
         let totalShippingValue = 0;

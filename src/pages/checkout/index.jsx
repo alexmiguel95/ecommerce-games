@@ -4,9 +4,12 @@ import styled from 'styled-components';
 import { StyledMain } from '../../styled';
 import { Row, Col } from 'antd'; 
 import CheckoutShoppingCart from '../../components/checkout-cart';
+import BannerInfoImportant from '../../components/banner-info-important';
 
 
 const Checkout = () => {
+    const listMessageBannerInfoImportant = ["O frete é grátis para compras acima de R$ 250,00."];
+
     return(
         <> 
             <Header />
@@ -15,9 +18,10 @@ const Checkout = () => {
                 <StyledDiv className="container-header">
                     <h1>Carrinho</h1>
                 </StyledDiv>
-                <Row>
-                    <Col xs={24} sm={16} md={16} lg={16} xl={16}> 
+                <Row gutter={30}>
+                    <Col xs={24} sm={16} md={16} lg={16} xl={16} span={30}> 
                         <CheckoutShoppingCart />
+                        <BannerInfoImportant listMessage={listMessageBannerInfoImportant} />
                     </Col>
                     <Col xs={24} sm={8} md={8} lg={8} xl={8}
                         style={{ 
