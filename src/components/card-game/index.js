@@ -3,26 +3,29 @@ import { Card, Button } from 'antd';
 import styled from 'styled-components';
 import imgCart from '../../assets/cart-icon.svg';
 import imgAddCart from '../../assets/arrow-down-icon.svg';
+import { addSoppingCar } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
 
 
-const CardGame = ({name, image, price}) => {
+const CardGame = ({id, name, image, price}) => {
+    const dispatch = useDispatch();
+    const game = {id, name, image, price}
     const { Meta } = Card;
 
     return(
         <StyledCard
             cover={
                 <img
-                    alt={`Imagem do jogo ${image}`}
-                    src={require(`../../assets/${image}`).default}
-                    
+                    alt={`Imagem do jogo ${game.image}`}
+                    src={require(`../../assets/${game.image}`).default}
                 />
             }
         >
             <Meta
                 title={name}
-                description={`R$ ${price}`}
+                description={`R$ ${game.price}`}
             />
-            <StyledButtonBuy>{" "}</StyledButtonBuy>
+            <StyledButtonBuy onClick={() => dispatch(addSoppingCar(game))}>{" "}</StyledButtonBuy>
       </StyledCard>
     );
 }
