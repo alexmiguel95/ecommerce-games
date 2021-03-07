@@ -4,6 +4,7 @@ import { Badge, Popover, Button, List } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteSoppingCar } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 
 
 const ShoppingCard = () => {
@@ -19,7 +20,7 @@ const ShoppingCard = () => {
             footer={
                 <div className="container-footer-list">
                     <span className="total">{`R$ ${total}`}</span>
-                    <Button type="text">Finalizar pedido</Button>
+                    <Link className="check-out" to="/checkout">Finalizar pedido</Link>
                 </div>
             }
             renderItem={(game, indexGame) => (
@@ -107,13 +108,15 @@ const StyledList = styled(List)`
         color:#0199CC;;
     }
 
-    button{
+    .check-out{
         background-color: #339933;
         color: white;
         border-color: #339933;
+        border-radius: 4px;
+        padding: 2px 5px 2px 5px;
     }
 
-    button:hover{
+    .check-out:hover{
         background-color: #339933;
         color: white;
         border-color: #339933;

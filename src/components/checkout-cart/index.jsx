@@ -43,10 +43,7 @@ const CheckoutShoppingCart = () => {
                 itemLayout="horizontal"
                 dataSource={products}
                 header={
-                    <div className="container-footer-list">
-                        <span className="text-list">{"PRODUTO"}</span>
-                        <span className="text-list">{"VALOR"}</span>
-                    </div>
+                    <span className="text-list">{"MEUS PRODUTOS"}</span> 
                 }
                 footer={
                     <div className="container-footer-list">
