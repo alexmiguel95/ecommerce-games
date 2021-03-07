@@ -25,7 +25,7 @@ const ShoppingCard = () => {
             renderItem={(game, indexGame) => (
                 <List.Item
                     actions={[
-                        <span className="sub-total">{`R$ ${game["price"]}`}</span>,
+                        <span className="price">{`R$ ${game["price"]}`}</span>,
                         <a key={game["id"]} onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</a>
                     ]}
                 >
@@ -103,8 +103,8 @@ const StyledList = styled(List)`
         color:#339933;
     }
 
-    .sub-total{
-        color:#0199CC;
+    .price{
+        color:#0199CC;;
     }
 
     button{
