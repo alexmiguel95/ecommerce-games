@@ -17,12 +17,12 @@ const Checkout = () => {
                     <h1>Carrinho</h1>
                     <Link className="home" to="/"><ArrowLeftOutlined style={{paddingRight: "5px"}}/>Continuar comprando</Link>
                 </StyledDiv>
-                <Row gutter={30}>
-                    <Col xs={24} sm={16} md={16} lg={16} xl={16} span={30}> 
+                <Row gutter={20}>
+                    <Col xs={24} sm={16} md={16} lg={16} xl={16} > 
                         <CheckoutShoppingCart />
                         <BannerInfoImportant />
                     </Col>
-                    <Col xs={24} sm={8} md={8} lg={8} xl={8}>
+                    <Col xs={24} sm={8} md={8} lg={8} xl={8} >
                         <MethodsPaymentContainer />
                     </Col>
                 </Row>
