@@ -4,37 +4,17 @@ import { Button, List } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteSoppingCar } from '../../redux/actions';
 import { Link } from 'react-router-dom';
+import calculateAmountToPay from './helperCalculateAmountPay';
 
 
 const CheckoutShoppingCart = () => {
     const products = useSelector((state) => state.shoppingCar);
     const dispatch = useDispatch();
-    let [subTotal, setSubTotal] = useState(0.0);
-    let [shipping, setShipping] = useState(0);
-    let [total, setTotal] = useState(0.0);
+    const [total, setTotal] = useState({subTotal: 0.0, shipping: 0.0, total: 0.0});
     
-
-    // Regra de negócio para calcular e mostrar o pagamento.
+    // Aplicar a regra de negócio para calular o pagamento.
     useEffect(() => {
-        let totalPriorValue = 0.0;
-        let totalShippingValue = 0;
-        const priceFixShipping = 10.00;
-
-        const calculateSubtotalAndShipping = (value) => {
-            totalPriorValue += value;
-            totalShippingValue += priceFixShipping;
-        } 
-
-        let pricesAllProduts = products.map(product => product.price);
-        pricesAllProduts.forEach(calculateSubtotalAndShipping);
-        setSubTotal(totalPriorValue);
-
-        if(totalPriorValue > 250.00){
-            totalShippingValue = 0;
-        }
-
-        setShipping(totalShippingValue);
-        setTotal(totalPriorValue + totalShippingValue);
+        setTotal(calculateAmountToPay(products));
     }, [products]);
 
     return(
@@ -49,9 +29,9 @@ const CheckoutShoppingCart = () => {
                 footer={
                     <div className="container-footer-list">
                         <div className="container-frete-subtotal-total">
-                            <span className="frete">{`FRETE R$ ${shipping}`}</span>
-                            <span className="sub-total">{`SUBTOTAL R$ ${subTotal}`}</span>
-                            <span className="total">{`TOTAL R$ ${total}`}</span>
+                            <span className="frete">{`FRETE R$ ${total["shipping"]}`}</span>
+                            <span className="sub-total">{`SUBTOTAL R$ ${total["subTotal"]}`}</span>
+                            <span className="total">{`TOTAL R$ ${total["total"]}`}</span>
                         </div>
                         <Button type="text">Finalizar pedido</Button>
                     </div>
@@ -60,7 +40,7 @@ const CheckoutShoppingCart = () => {
                     <List.Item
                         actions={[
                             <span className="sub-total">{`R$ ${game["price"]}`}</span>,
-                            <Link to="" onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
+                            <Link to="/checkout" onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
                         ]}
                     >
                         <img
