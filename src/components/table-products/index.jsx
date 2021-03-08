@@ -30,7 +30,6 @@ const TableProducts = () => {
     const columns = [
         {
             dataIndex: 'image',
-            key: 'image',
             render: nameImage => <img
                 alt={`Imagem do jogo ${nameImage}`}
                 src={require(`../../assets/${nameImage}`).default}
@@ -40,7 +39,6 @@ const TableProducts = () => {
         {
             title: 'Nome',
             dataIndex: 'name',
-            key: 'name',
             // specify the condition of filtering result
             // here is that finding the name started with `value`
             onFilter: (value, record) => record.name["name"].indexOf(value) === 0,
@@ -50,7 +48,6 @@ const TableProducts = () => {
         {
             title: 'Preço',
             dataIndex: 'price',
-            key: 'price',
             defaultSortOrder: 'descend',
             sorter: (a, b) => a.price - b.price,
             render: price => <span>{`R$ ${price}`}</span>
@@ -58,7 +55,6 @@ const TableProducts = () => {
         {
             title: 'Avaliação',
             dataIndex: 'score',
-            key: 'score',
             defaultSortOrder: 'descend',
             sorter: (a, b) => a.score - b.score,
             render: score => <Rate disabled value={calculateRate(score)} />
@@ -69,15 +65,13 @@ const TableProducts = () => {
                     {" "}
                 </StyledButtonBuy>
             ),
-            align: 'center',
-            key: 'key',
+            align: 'center'
         }
     ];
 
     const columnsMobile = [
         {
             dataIndex: 'image',
-            key: 'image',
             render: nameImage => <img
                 alt={`Imagem do jogo ${nameImage}`}
                 src={require(`../../assets/${nameImage}`).default}
@@ -87,9 +81,6 @@ const TableProducts = () => {
         {
             title: 'Nome',
             dataIndex: 'name',
-            key: 'name',
-            // specify the condition of filtering result
-            // here is that finding the name started with `value`
             onFilter: (value, record) => record.name["name"].indexOf(value) === 0,
             sorter: (a, b) => a.name.length - b.name,
             sortDirections: ['descend']
@@ -107,18 +98,18 @@ const TableProducts = () => {
                     {" "}
                 </StyledButtonBuy>
             ),
-            align: 'center',
+            align: 'center'
         }
     ];
    
     if(width < 768){
         return (
-            <Table columns={columnsMobile} dataSource={products} />
+            <Table columns={columnsMobile} dataSource={products} rowKey="id" />
         )
     }
     
     return (
-        <Table columns={columns} dataSource={products} />
+        <Table columns={columns} dataSource={products} rowKey="id" />
     )
 }
 
