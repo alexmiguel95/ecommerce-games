@@ -5,7 +5,7 @@ import { ShoppingCartOutlined } from '@ant-design/icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteSoppingCar } from '../../redux/actions';
 import { Link } from 'react-router-dom';
-import addValueProductsIncart from './helperAddValueProductsIncart';
+import addValueProductsInCart from './helperAddValueProductsInCart';
 
 
 const ShoppingCard = () => {
@@ -44,7 +44,7 @@ const ShoppingCard = () => {
     );
 
     useEffect(() => {
-        setTotal(addValueProductsIncart(products));
+        setTotal(addValueProductsInCart(products));
     }, [products]);
 
     return(
