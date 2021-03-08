@@ -2,7 +2,7 @@
 
 |   Descrição	|   Como utilizar 	|
 |---	|---	|
-| O desafio consiste em construir a interface de um ecommerce de games utilizando React Web. |  Desenvolvido em ReactJS com a biblioteca de compoenetes React UI Antd, Styled components e Redux. Para rodar o projeto localmente, basta clonar o projeto e no terminal digitar **sudo yarn** para instalar todas as depêndencias do projeto, depois é só executar o comando **yarn start** e o projeto sera aberto no browser default.	|
+| O desafio consiste em construir a interface de um ecommerce de games utilizando React Web. |  Desenvolvido em ReactJS com a biblioteca de compoenetes React UI Antd, Styled Components, Redux e React Router Dom. Para rodar o projeto localmente, basta clonar o projeto e no terminal digitar **sudo yarn** para instalar todas as depêndencias do projeto, depois é só executar o comando **yarn start** e o projeto sera aberto no browser default.	|
 
 &nbsp; 
 ###  URL para visualizar o projeto: 
