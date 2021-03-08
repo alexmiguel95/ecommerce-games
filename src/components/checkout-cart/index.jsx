@@ -60,7 +60,7 @@ const CheckoutShoppingCart = () => {
                     <List.Item
                         actions={[
                             <span className="sub-total">{`R$ ${game["price"]}`}</span>,
-                            <Link key={game["id"]} onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
+                            <Link to="" onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
                         ]}
                     >
                         <img
