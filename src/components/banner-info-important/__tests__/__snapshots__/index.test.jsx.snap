@@ -2,7 +2,7 @@
 
 exports[`Mostrar uma lista de mensagens 1`] = `
 <div
-  className="ant-list ant-list-split ant-list-bordered sc-bdfBwQ kuEClN"
+  className="ant-list ant-list-split ant-list-bordered sc-bdfBwQ gpSLpd"
 >
   <div
     className="ant-spin-nested-loading"
