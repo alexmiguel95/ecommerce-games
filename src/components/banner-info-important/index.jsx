@@ -24,6 +24,7 @@ export default BannerInfoImportant;
 
 const StyledList = styled(List)`
     margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: white;
     border-radius: 4px;
     font-size: 1rem;
