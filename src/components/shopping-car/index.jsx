@@ -27,7 +27,7 @@ const ShoppingCard = () => {
                 <List.Item
                     actions={[
                         <span className="price">{`R$ ${game["price"]}`}</span>,
-                        <a key={game["id"]} onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</a>
+                        <Link key={game["id"]} onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
                     ]}
                 >
                     <img
