@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Button, List } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteSoppingCar } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 
 
 const CheckoutShoppingCart = () => {
@@ -59,7 +60,7 @@ const CheckoutShoppingCart = () => {
                     <List.Item
                         actions={[
                             <span className="sub-total">{`R$ ${game["price"]}`}</span>,
-                            <a key={game["id"]} onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</a>
+                            <Link key={game["id"]} onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
                         ]}
                     >
                         <img
