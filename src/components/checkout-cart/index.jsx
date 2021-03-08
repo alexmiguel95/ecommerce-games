@@ -17,7 +17,7 @@ const CheckoutShoppingCart = () => {
     useEffect(() => {
         let totalPriorValue = 0.0;
         let totalShippingValue = 0;
-        const priceFixShipping = 10;
+        const priceFixShipping = 10.00;
 
         const calculateSubtotalAndShipping = (value) => {
             totalPriorValue += value;

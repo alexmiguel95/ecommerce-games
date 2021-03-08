@@ -3,28 +3,27 @@ import styled from 'styled-components';
 import { StyledMain } from '../../styled';
 import { Row, Col } from 'antd'; 
 import CheckoutShoppingCart from '../../components/checkout-cart';
-import BannerInfoImportant from '../../components/banner-info-important';
+import BannerInfoImportant from '../../containers/banner-info-important-container';
+import MethodsPaymentContainer from '../../containers/methods-payment-container';
 import { Link } from 'react-router-dom';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 
 
 const Checkout = () => {
-    const listMessageBannerInfoImportant = ["O frete é grátis para compras acima de R$ 250,00."];
-
     return(
         <> 
             <StyledMain>
                 <StyledDiv>
                     <h1>Carrinho</h1>
-                    <Link className="home" to="/">Continuar comprando</Link>
+                    <Link className="home" to="/"><ArrowLeftOutlined style={{paddingRight: "5px"}}/>Continuar comprando</Link>
                 </StyledDiv>
                 <Row gutter={30}>
                     <Col xs={24} sm={16} md={16} lg={16} xl={16} span={30}> 
                         <CheckoutShoppingCart />
-                        <BannerInfoImportant listMessage={listMessageBannerInfoImportant} />
+                        <BannerInfoImportant />
                     </Col>
-                    <Col xs={24} sm={8} md={8} lg={8} xl={8}
-                        style={{ 
-                        backgroundColor: 'white', height: '100vh' }}>  
+                    <Col xs={24} sm={8} md={8} lg={8} xl={8}>
+                        <MethodsPaymentContainer />
                     </Col>
                 </Row>
             </StyledMain>
