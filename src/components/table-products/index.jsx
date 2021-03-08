@@ -7,25 +7,13 @@ import { useDispatch } from 'react-redux';
 import imgCart from '../../assets/cart-icon.svg';
 import imgAddCart from '../../assets/arrow-down-icon.svg';
 import { useWindowSize } from "../../hooks";
+import calculateRate from './helperCalculateRate';
 
 
 const TableProducts = () => {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.productsList);
     const [width] = useWindowSize();
-
-    const calculateRate = (score) => {
-        // Assumindo que temos 5 estrelas e o score máximo seja 400, cada estrela vale 80 pontos.
-        const stars = [0, 80, 160, 240, 330];
-
-        for(let i = 0; i < stars.length; i++){
-            if(score < stars[i]) {
-                return i;
-            }
-        }
- 
-        return 5;
-    }
 
     const columns = [
         {
