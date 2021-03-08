@@ -50,6 +50,7 @@ const TableProducts = () => {
         {
             title: 'Preço',
             dataIndex: 'price',
+            key: 'price',
             defaultSortOrder: 'descend',
             sorter: (a, b) => a.price - b.price,
             render: price => <span>{`R$ ${price}`}</span>
@@ -57,6 +58,7 @@ const TableProducts = () => {
         {
             title: 'Avaliação',
             dataIndex: 'score',
+            key: 'score',
             defaultSortOrder: 'descend',
             sorter: (a, b) => a.score - b.score,
             render: score => <Rate disabled value={calculateRate(score)} />
@@ -68,6 +70,7 @@ const TableProducts = () => {
                 </StyledButtonBuy>
             ),
             align: 'center',
+            key: 'key',
         }
     ];
 
