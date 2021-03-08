@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mostrar um banner de destaque 1`] = `
+<div
+  className="ant-steps ant-steps-horizontal sc-bdfBwQ joCkMM ant-steps-label-horizontal"
+  style={Object {}}
+>
+  <div
+    className="ant-steps-item ant-steps-item-finish ant-steps-item-custom ant-steps-item-active"
+    style={Object {}}
+  >
+    <div
+      className="ant-steps-item-container"
+    >
+      <div
+        className="ant-steps-item-tail"
+      />
+      <div
+        className="ant-steps-item-icon"
+      >
+        <span
+          className="ant-steps-icon"
+        >
+          <span
+            aria-label="reddit"
+            className="anticon anticon-reddit"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              data-icon="reddit"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M288 568a56 56 0 10112 0 56 56 0 10-112 0zm338.7 119.7c-23.1 18.2-68.9 37.8-114.7 37.8s-91.6-19.6-114.7-37.8c-14.4-11.3-35.3-8.9-46.7 5.5s-8.9 35.3 5.5 46.7C396.3 771.6 457.5 792 512 792s115.7-20.4 155.9-52.1a33.25 33.25 0 10-41.2-52.2zM960 456c0-61.9-50.1-112-112-112-42.1 0-78.7 23.2-97.9 57.6-57.6-31.5-127.7-51.8-204.1-56.5L612.9 195l127.9 36.9c11.5 32.6 42.6 56.1 79.2 56.1 46.4 0 84-37.6 84-84s-37.6-84-84-84c-32 0-59.8 17.9-74 44.2L603.5 123a33.2 33.2 0 00-39.6 18.4l-90.8 203.9c-74.5 5.2-142.9 25.4-199.2 56.2A111.94 111.94 0 00176 344c-61.9 0-112 50.1-112 112 0 45.8 27.5 85.1 66.8 102.5-7.1 21-10.8 43-10.8 65.5 0 154.6 175.5 280 392 280s392-125.4 392-280c0-22.6-3.8-44.5-10.8-65.5C932.5 541.1 960 501.8 960 456zM820 172.5a31.5 31.5 0 110 63 31.5 31.5 0 010-63zM120 456c0-30.9 25.1-56 56-56a56 56 0 0150.6 32.1c-29.3 22.2-53.5 47.8-71.5 75.9a56.23 56.23 0 01-35.1-52zm392 381.5c-179.8 0-325.5-95.6-325.5-213.5S332.2 410.5 512 410.5 837.5 506.1 837.5 624 691.8 837.5 512 837.5zM868.8 508c-17.9-28.1-42.2-53.7-71.5-75.9 9-18.9 28.3-32.1 50.6-32.1 30.9 0 56 25.1 56 56 .1 23.5-14.5 43.7-35.1 52zM624 568a56 56 0 10112 0 56 56 0 10-112 0z"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+      <div
+        className="ant-steps-item-content"
+      >
+        <div
+          className="ant-steps-item-title"
+        >
+          Todos os lançamentos
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ant-steps-item ant-steps-item-finish ant-steps-item-custom"
+    style={Object {}}
+  >
+    <div
+      className="ant-steps-item-container"
+    >
+      <div
+        className="ant-steps-item-tail"
+      />
+      <div
+        className="ant-steps-item-icon"
+      >
+        <span
+          className="ant-steps-icon"
+        >
+          <span
+            aria-label="safety-certificate"
+            className="anticon anticon-safety-certificate"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              data-icon="safety-certificate"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M866.9 169.9L527.1 54.1C523 52.7 517.5 52 512 52s-11 .7-15.1 2.1L157.1 169.9c-8.3 2.8-15.1 12.4-15.1 21.2v482.4c0 8.8 5.7 20.4 12.6 25.9L499.3 968c3.5 2.7 8 4.1 12.6 4.1s9.2-1.4 12.6-4.1l344.7-268.6c6.9-5.4 12.6-17 12.6-25.9V191.1c.2-8.8-6.6-18.3-14.9-21.2zM810 654.3L512 886.5 214 654.3V226.7l298-101.6 298 101.6v427.6zm-405.8-201c-3-4.1-7.8-6.6-13-6.6H336c-6.5 0-10.3 7.4-6.5 12.7l126.4 174a16.1 16.1 0 0026 0l212.6-292.7c3.8-5.3 0-12.7-6.5-12.7h-55.2c-5.1 0-10 2.5-13 6.6L468.9 542.4l-64.7-89.1z"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+      <div
+        className="ant-steps-item-content"
+      >
+        <div
+          className="ant-steps-item-title"
+        >
+          Compra 100% segura
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ant-steps-item ant-steps-item-finish ant-steps-item-custom"
+    style={Object {}}
+  >
+    <div
+      className="ant-steps-item-container"
+    >
+      <div
+        className="ant-steps-item-tail"
+      />
+      <div
+        className="ant-steps-item-icon"
+      >
+        <span
+          className="ant-steps-icon"
+        >
+          <span
+            aria-label="smile"
+            className="anticon anticon-smile"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              data-icon="smile"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M288 421a48 48 0 1096 0 48 48 0 10-96 0zm352 0a48 48 0 1096 0 48 48 0 10-96 0zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm263 711c-34.2 34.2-74 61-118.3 79.8C611 874.2 562.3 884 512 884c-50.3 0-99-9.8-144.8-29.2A370.4 370.4 0 01248.9 775c-34.2-34.2-61-74-79.8-118.3C149.8 611 140 562.3 140 512s9.8-99 29.2-144.8A370.4 370.4 0 01249 248.9c34.2-34.2 74-61 118.3-79.8C413 149.8 461.7 140 512 140c50.3 0 99 9.8 144.8 29.2A370.4 370.4 0 01775.1 249c34.2 34.2 61 74 79.8 118.3C874.2 413 884 461.7 884 512s-9.8 99-29.2 144.8A368.89 368.89 0 01775 775zM664 533h-48.1c-4.2 0-7.8 3.2-8.1 7.4C604 589.9 562.5 629 512 629s-92.1-39.1-95.8-88.6c-.3-4.2-3.9-7.4-8.1-7.4H360a8 8 0 00-8 8.4c4.4 84.3 74.5 151.6 160 151.6s155.6-67.3 160-151.6a8 8 0 00-8-8.4z"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+      <div
+        className="ant-steps-item-content"
+      >
+        <div
+          className="ant-steps-item-title"
+        >
+          Grandes promoções
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
