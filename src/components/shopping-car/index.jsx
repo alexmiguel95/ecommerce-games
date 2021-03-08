@@ -15,6 +15,7 @@ const ShoppingCard = () => {
     
     const content = (
         <StyledList
+            rowKey = "id"
             itemLayout="horizontal"
             dataSource={products}
             footer={
@@ -27,7 +28,7 @@ const ShoppingCard = () => {
                 <List.Item
                     actions={[
                         <span className="price">{`R$ ${game["price"]}`}</span>,
-                        <Link key={game["id"]} onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
+                        <Link to="" onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
                     ]}
                 >
                     <img
