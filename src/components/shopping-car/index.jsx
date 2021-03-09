@@ -19,7 +19,7 @@ const ShoppingCard = () => {
     const content = (
         <StyledList
             rowKey = "id"
-            itemLayout="horizontal"
+            itemLayout={width < 768 ? "vertical" : "horizontal"}
             dataSource={products}
             footer={
                 <div className="container-footer-list">
@@ -73,28 +73,28 @@ const ShoppingCard = () => {
         setTotal(addValueProductsInCart(products));
     }, [products]);
 
-    if(width < 768){
-        return (
-            <>
-                {
-                    products.length > 0 ?
-                    <StyledPopover placement="bottomRight" content={contentMobile}>
-                        <StyledBuntton type="text">
-                            <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
-                                <ShoppingCartOutlined />
-                            </Badge>
-                        </StyledBuntton>
-                    </StyledPopover>
-                    :
-                    <StyledBuntton type="text">
-                        <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
-                            <ShoppingCartOutlined />
-                        </Badge>
-                    </StyledBuntton>
-                }
-            </>
-        );
-    }
+    // if(width < 768){
+    //     return (
+    //         <>
+    //             {
+    //                 products.length > 0 ?
+    //                 <StyledPopover placement="bottomRight" content={contentMobile}>
+    //                     <StyledBuntton type="text">
+    //                         <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
+    //                             <ShoppingCartOutlined />
+    //                         </Badge>
+    //                     </StyledBuntton>
+    //                 </StyledPopover>
+    //                 :
+    //                 <StyledBuntton type="text">
+    //                     <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
+    //                         <ShoppingCartOutlined />
+    //                     </Badge>
+    //                 </StyledBuntton>
+    //             }
+    //         </>
+    //     );
+    // }
 
     return(
         <>
