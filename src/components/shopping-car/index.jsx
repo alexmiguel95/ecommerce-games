@@ -56,7 +56,7 @@ const ShoppingCard = () => {
                 <StyledPopover placement="bottomRight" content={content}>
                     <StyledBuntton type="text">
                         <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
-                            <ShoppingCartOutlined />
+                            <ShoppingCartOutlined className="icon-cart-hover" />
                         </Badge>
                     </StyledBuntton>
                 </StyledPopover>
@@ -78,6 +78,7 @@ const StyledPopover = styled(Popover)`
     button{
         background-color: black;
     }
+
 `;
 
 const StyledBuntton = styled(Button)`
@@ -89,6 +90,10 @@ const StyledBuntton = styled(Button)`
     .ant-badge{
         font-size: 35px;
         color: #339933;
+    }
+
+    .icon-cart-hover:hover {
+        font-size: 40px;
     }
 `;
 
@@ -111,7 +116,7 @@ const StyledList = styled(List)`
         background-color: #339933;
         color: white;
         border-color: #339933;
-        border-radius: 4px;
+        border-radius: 5px;
         padding: 2px 5px 2px 5px;
     }
 
@@ -119,6 +124,7 @@ const StyledList = styled(List)`
         background-color: #339933;
         color: white;
         border-color: #339933;
+        padding: 3px 6px 2px 6px;
     }
 
     a{
