@@ -1,3 +1,3 @@
-import StyledMain from './styled-main';
+import StyledContainer from './styled-main';
 
-export { StyledMain }
+export { StyledContainer }

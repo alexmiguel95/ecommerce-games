@@ -19,6 +19,10 @@ export default Header;
 
 
 const StyledHeader = styled.header`
+    /* position: fixed;
+    top: 0px;
+    z-index: 1; */
+    width: 100%;	
     background-color: black;
     display: flex;
     justify-content: space-between;

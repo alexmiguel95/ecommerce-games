@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer da pagina 1`] = `
+<footer
+  className="sc-dlfnbm YoOzv"
+>
+  <div
+    className="sc-bdfBwQ jFredM"
+  >
+    <header
+      className="sc-gsTCUz vgldJ"
+    >
+      <figure>
+        <img
+          alt="Logo Challenge"
+        />
+      </figure>
+      <span>
+        © 2021 - Created by 
+        <a
+          href="https://www.linkedin.com/in/alexmiguel95/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Alex Miguel
+        </a>
+      </span>
+    </header>
+  </div>
+</footer>
+`;

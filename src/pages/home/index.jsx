@@ -3,14 +3,14 @@ import WhyBuyHere from '../../components/why-buy-here';
 import TableProducts from '../../components/table-products';
 import styled from 'styled-components';
 import { useWindowSize } from "../../hooks";
-import { StyledMain } from '../../styled';
+import { StyledContainer } from '../../styled';
 
 const Home = () => {
     const [width] = useWindowSize();
 
     return(
         <> 
-            <StyledMain>
+            <StyledContainer>
                 <StyledContainerProducts>
                     {
                         width > 1000 &&
@@ -20,7 +20,7 @@ const Home = () => {
                         <TableProducts />
                     </StyledContainerListProducts>
                 </StyledContainerProducts>
-            </StyledMain>
+            </StyledContainer>
         </>
     );
 }

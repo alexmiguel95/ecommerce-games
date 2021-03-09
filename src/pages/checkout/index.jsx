@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledMain } from '../../styled';
+import { StyledContainer } from '../../styled';
 import { Row, Col } from 'antd'; 
 import CheckoutShoppingCart from '../../components/checkout-cart';
 import BannerInfoImportant from '../../containers/banner-info-important-container';
@@ -12,12 +12,12 @@ import { ArrowLeftOutlined } from '@ant-design/icons';
 const Checkout = () => {
     return(
         <> 
-            <StyledMain>
+            <StyledContainer>
                 <StyledDiv>
                     <h1>Carrinho</h1>
                     <Link className="home" to="/"><ArrowLeftOutlined style={{paddingRight: "5px"}}/>Continuar comprando</Link>
                 </StyledDiv>
-                <Row gutter={20}>
+                <Row gutter={20} style={{marginBottom: "500px"}}>
                     <Col xs={24} sm={16} md={16} lg={16} xl={16} > 
                         <CheckoutShoppingCart />
                         <BannerInfoImportant />
@@ -26,7 +26,7 @@ const Checkout = () => {
                         <MethodsPaymentContainer />
                     </Col>
                 </Row>
-            </StyledMain>
+            </StyledContainer>
         </>
     );
 }
@@ -39,6 +39,10 @@ const StyledDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &.container{
+        border: 1px solid red;
+    }
    
     h1{
         margin: 0;
