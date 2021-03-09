@@ -79,9 +79,14 @@ const StyledPopover = styled(Popover)`
 `;
 
 const StyledBuntton = styled(Button)`
+    position: fixed;
+    right: 25px;
+    top: 30px;
+    z-index: 1;
+
     .ant-badge{
         font-size: 35px;
-        color: white;
+        color: #339933;
     }
 `;
 
