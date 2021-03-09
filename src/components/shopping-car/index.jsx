@@ -6,10 +6,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteSoppingCar } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import addValueProductsInCart from './helperAddValueProductsInCart';
+import { useWindowSize } from "../../hooks";
 
 
 const ShoppingCard = () => {
     const products = useSelector((state) => state.shoppingCar);
+    const [width] = useWindowSize();
     
     const dispatch = useDispatch();
     let [total, setTotal] = useState(0.0);
@@ -17,7 +19,7 @@ const ShoppingCard = () => {
     const content = (
         <StyledList
             rowKey = "id"
-            itemLayout="horizontal"
+            itemLayout={width < 768 ? "vertical" : "horizontal"}
             dataSource={products}
             footer={
                 <div className="container-footer-list">
@@ -43,9 +45,56 @@ const ShoppingCard = () => {
         />
     );
 
+    const contentMobile = (
+        <StyledList
+            rowKey = "id"
+            itemLayout="horizontal"
+            dataSource={products}
+            footer={
+                <div className="container-footer-list">
+                    <span className="total">{`R$ ${total}`}</span>
+                    <Link className="check-out" to="/checkout">Finalizar pedido</Link>
+                </div>
+            }
+            renderItem={(game, indexGame) => (
+                <List.Item
+                    actions={[
+                        <span className="price">{`R$ ${game["price"]}`}</span>,
+                        <Link to="" onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
+                    ]}
+                >
+                    <span>{game["name"]}</span>
+                </List.Item>
+            )}
+        />
+    );
+
     useEffect(() => {
         setTotal(addValueProductsInCart(products));
     }, [products]);
+
+    // if(width < 768){
+    //     return (
+    //         <>
+    //             {
+    //                 products.length > 0 ?
+    //                 <StyledPopover placement="bottomRight" content={contentMobile}>
+    //                     <StyledBuntton type="text">
+    //                         <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
+    //                             <ShoppingCartOutlined />
+    //                         </Badge>
+    //                     </StyledBuntton>
+    //                 </StyledPopover>
+    //                 :
+    //                 <StyledBuntton type="text">
+    //                     <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
+    //                         <ShoppingCartOutlined />
+    //                     </Badge>
+    //                 </StyledBuntton>
+    //             }
+    //         </>
+    //     );
+    // }
 
     return(
         <>

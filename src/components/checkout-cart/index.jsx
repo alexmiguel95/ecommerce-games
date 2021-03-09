@@ -5,12 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteSoppingCar } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import calculateAmountToPay from './helperCalculateAmountPay';
+import { useWindowSize } from "../../hooks";
 
 
 const CheckoutShoppingCart = () => {
     const products = useSelector((state) => state.shoppingCar);
     const dispatch = useDispatch();
     const [total, setTotal] = useState({subTotal: 0.0, shipping: 0.0, total: 0.0});
+    const [width] = useWindowSize();
     
     // Aplicar a regra de negócio para calular o pagamento.
     useEffect(() => {
@@ -21,7 +23,7 @@ const CheckoutShoppingCart = () => {
         <>
             <StyledList
                 bordered={true}
-                itemLayout="horizontal"
+                itemLayout={width < 575.98 ? "vertical" : "horizontal"}
                 dataSource={products}
                 header={
                     <span className="text-list">{"MEUS PRODUTOS"}</span> 
