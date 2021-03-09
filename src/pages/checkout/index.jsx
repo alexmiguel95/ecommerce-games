@@ -57,6 +57,10 @@ const StyledDiv = styled.div`
         border-radius: 4px;
         padding: 5px 15px 5px 15px;
     }
+
+    .home:hover{
+        padding: 6px 16px 6px 16px;
+    }
 `; 
 
 
