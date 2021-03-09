@@ -45,56 +45,9 @@ const ShoppingCard = () => {
         />
     );
 
-    const contentMobile = (
-        <StyledList
-            rowKey = "id"
-            itemLayout="horizontal"
-            dataSource={products}
-            footer={
-                <div className="container-footer-list">
-                    <span className="total">{`R$ ${total}`}</span>
-                    <Link className="check-out" to="/checkout">Finalizar pedido</Link>
-                </div>
-            }
-            renderItem={(game, indexGame) => (
-                <List.Item
-                    actions={[
-                        <span className="price">{`R$ ${game["price"]}`}</span>,
-                        <Link to="" onClick={() => dispatch(deleteSoppingCar(indexGame))}>Remover</Link>
-                    ]}
-                >
-                    <span>{game["name"]}</span>
-                </List.Item>
-            )}
-        />
-    );
-
     useEffect(() => {
         setTotal(addValueProductsInCart(products));
     }, [products]);
-
-    // if(width < 768){
-    //     return (
-    //         <>
-    //             {
-    //                 products.length > 0 ?
-    //                 <StyledPopover placement="bottomRight" content={contentMobile}>
-    //                     <StyledBuntton type="text">
-    //                         <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
-    //                             <ShoppingCartOutlined />
-    //                         </Badge>
-    //                     </StyledBuntton>
-    //                 </StyledPopover>
-    //                 :
-    //                 <StyledBuntton type="text">
-    //                     <Badge count={products.length} style={{backgroundColor: "#339933", borderColor: "#339933"}}>
-    //                         <ShoppingCartOutlined />
-    //                     </Badge>
-    //                 </StyledBuntton>
-    //             }
-    //         </>
-    //     );
-    // }
 
     return(
         <>
